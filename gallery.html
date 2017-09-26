@@ -20,16 +20,28 @@
 				</div>
 				<div class="center">
 				<figure>
-				<img src="image/gallery/0135.jpg" alt="lipiec 2017">
-				<img src="image/gallery/0116.jpg" alt="lipiec 2017">
-				<img src="image/gallery/0050.jpg" alt="lipiec 2017">
-				<img src="image/gallery/4345674.jpg" alt="wrzesień 2015">
-				<img src="image/gallery/4401852.jpg" alt="sierpień 2015">
-				<img src="image/gallery/4545092.jpg" alt="sierpień 2015">
-				<img src="image/gallery/4794003.jpg" alt="sierpień 2015">
-				<img src="image/gallery/1040741.jpg" alt="sierpień 2015">
-				<img src="image/gallery/6329904.jpg" alt="sierpień 2015">
-				<img src="image/gallery/7387470.jpg" alt="lipiec 2015">
+				<div class="box">
+				<img src="image/gallery/0135.jpg" alt="lipiec 2017"></div>
+				<div class="box">
+				<img src="image/gallery/0116.jpg" alt="lipiec 2017"></div>
+				<div class="box">
+				<img src="image/gallery/0050.jpg" alt="lipiec 2017"></div>
+				<div class="box">
+				<img src="image/gallery/4345674.jpg" alt="wrzesień 2015"></div>
+				<div class="box">
+				<img src="image/gallery/4401852.jpg" alt="sierpień 2015"></div>
+				<div class="box">
+				<img src="image/gallery/4545092.jpg" alt="sierpień 2015"></div>
+				<div class="box">
+				<img src="image/gallery/4794003.jpg" alt="sierpień 2015"></div>
+				<div class="box">
+				<img src="image/gallery/1040741.jpg" alt="sierpień 2015"></div>
+				<div class="box">
+				<img src="image/gallery/6329904.jpg" alt="sierpień 2015"></div>
+				<div class="box">
+				<img src="image/gallery/7387470.jpg" alt="lipiec 2015"></div>
+				
+				
 				</figure>
 				</div>
 				<div style=" clear:both"></div>
@@ -59,24 +71,25 @@
 
 <script type="text/javascript" >
 $(document).ready(function(){
-	
+
 	var slideWidth = $('.center').width();
 	var i = 0
 
   $(".arrowl").click(function(){
 	 
-	 var div = $("img"); 
+	 var div = $("figure"); 
 		i++;
-        div.animate({right: slideWidth * i}, "slow");	
+        div.animate({right: slideWidth * i}, "slow");
     });
 
 	$(".arrowr").click(function(){
-      
 	  i--;
-	   var div = $("img");  
+	   var div = $("figure");  
        div.animate({right: slideWidth * i}, "slow");
-		
     });
+	
+	
+	
 });
 
 
