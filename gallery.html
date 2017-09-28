@@ -15,34 +15,33 @@
 
 				
 				<div id="gallery">
+				
 				<div class="left">
 				<span class="arrowl">&lt;</span>
 				</div>
 				<div class="center">
-				<figure>
-				<div class="box">
-				<img src="image/gallery/0135.jpg" alt="lipiec 2017"></div>
-				<div class="box">
-				<img src="image/gallery/0116.jpg" alt="lipiec 2017"></div>
-				<div class="box">
-				<img src="image/gallery/0050.jpg" alt="lipiec 2017"></div>
-				<div class="box">
-				<img src="image/gallery/4345674.jpg" alt="wrzesień 2015"></div>
-				<div class="box">
-				<img src="image/gallery/4401852.jpg" alt="sierpień 2015"></div>
-				<div class="box">
-				<img src="image/gallery/4545092.jpg" alt="sierpień 2015"></div>
-				<div class="box">
-				<img src="image/gallery/4794003.jpg" alt="sierpień 2015"></div>
-				<div class="box">
-				<img src="image/gallery/1040741.jpg" alt="sierpień 2015"></div>
-				<div class="box">
-				<img src="image/gallery/6329904.jpg" alt="sierpień 2015"></div>
-				<div class="box">
-				<img src="image/gallery/7387470.jpg" alt="lipiec 2015"></div>
-				
-				
-				</figure>
+				<ul>
+				<li class="box">
+				<img src="image/gallery/0135.jpg" alt="lipiec 2017"></li>
+				<li class="box">
+				<img src="image/gallery/0116.jpg" alt="lipiec 2017"></li>
+				<li class="box">
+				<img src="image/gallery/0050.jpg" alt="lipiec 2017"></li>
+				<li class="box">
+				<img src="image/gallery/4345674.jpg" alt="wrzesień 2015"></li>
+				<li class="box">
+				<img src="image/gallery/4401852.jpg" alt="sierpień 2015"></li>
+				<li class="box">
+				<img src="image/gallery/4545092.jpg" alt="sierpień 2015"></li>
+				<li class="box">
+				<img src="image/gallery/4794003.jpg" alt="sierpień 2015"></li>
+				<li class="box">
+				<img src="image/gallery/1040741.jpg" alt="sierpień 2015"></li>
+				<li class="box">
+				<img src="image/gallery/6329904.jpg" alt="sierpień 2015"></li>
+				<li class="box">
+				<img src="image/gallery/7387470.jpg" alt="lipiec 2015"></li>
+				</ul>
 				</div>
 				<div style=" clear:both"></div>
 				<div class="right">
@@ -72,28 +71,45 @@
 <script type="text/javascript" >
 $(document).ready(function(){
 
-	var slideWidth = $('.center').width();
+	var picCount = $('#gallery ul li').length;
+	var galleryWidth = $('#gallery').width();
+	var allUlWidth = picCount * galleryWidth;
 	var i = 0
 
-  $(".arrowl").click(function(){
+	$('#gallery ul').css({ width: allUlWidth});
+	$(".arrowl").click(function(){
 	 
-	 var div = $("figure"); 
+	 var div = $("ul"); 
 		i++;
-        div.animate({right: slideWidth * i}, "slow");
+		if (i === picCount)
+		{
+		div.animate({right: 0 + "px"}, "slow");
+		i = 0;
+		}
+		else
+		{
+        div.animate({right: galleryWidth * i}, "slow");
+		}
     });
 
 	$(".arrowr").click(function(){
 	  i--;
-	   var div = $("figure");  
-       div.animate({right: slideWidth * i}, "slow");
-    });
-	
-	
-	
+	  var div = $("ul"); 
+	 	if (i === -1)
+		{
+		div.animate({right: 0 + "px",}, "slow");
+		
+		i=0;
+		
+		}
+		else
+		{
+        div.animate({right: galleryWidth * i}, "slow");
+		}
+
+   });
+
 });
-
-
-
 </script>
 
 </body>

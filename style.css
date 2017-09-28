@@ -13,7 +13,6 @@ body
 	margin-top: 50px;
 	height: 500px;
 	width: 900px;
-	border: 1px solid black;
 	overflow: hidden;
 
 }
@@ -55,6 +54,7 @@ body
 	width: 70%;
 	margin-left: 15%;
 	text-align: center;
+	background: rgb(230,230,230);
 }
 .right
 {
@@ -88,20 +88,21 @@ body
 	cursor: pointer;
 	border-radius: 5px 0 0 5px;
 }
-figure
+ul
 {
 	position: relative;
-	width: 1000%;
+	
 	margin: 0px;
+	margin-left: -135px;
 	padding: 0px;
 	height: 100%;
-	background: rgb(230,230,230);
+	list-style-type: none;
 }
 .box
 {
 	margin: 0px;
 	padding: 0px;
-	width: 10%;
+	width: 900px;
 	height: 100%;
 	float: left;
 	text-align: center;
